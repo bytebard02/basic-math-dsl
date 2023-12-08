@@ -1,0 +1,25 @@
+{
+    "tasks": [
+      {
+        "label": "make build",
+        "type": "shell",
+        "command": "make",
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
+      },
+      {
+        "label": "make clean",
+        "type": "shell",
+        "command": "make",
+        "args": ["clean"],
+        "group": {
+          "kind": "build",
+          "isDefault": false
+        }
+      }
+    ],
+    "version": "2.0.0"
+  }
+  
