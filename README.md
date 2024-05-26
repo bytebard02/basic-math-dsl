@@ -65,7 +65,7 @@ Step-by-step instructions on how to create a program using this Domain-Specific 
        print "Result is exactly 10"
    else:
        print "Result is less than 10"
-  ```
+   ```
 
 5. While Loop (Optional):
    - Optionally, a while loop can be implemented to repeat a block of code while a certain condition is met.
