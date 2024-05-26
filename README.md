@@ -1,20 +1,22 @@
 
-# Simple Math Domain-Specific Language (DSL)SL
+# Simple Math Domain-Specific Language (DSL)
+
+> **_NOTE:_**  This project is still in progress, therefore its repository is not completed. The descriptions below outline the intended goals and features of the repository.
 
 The presented DSL (Domain-Specific Language) is designed for creating and executing basic mathematical programs. The grammar includes the following elements:
 
-`var`: Initializes a variable.
-`int, float`: Define data types.
-`while`: Indicates the start of a while loop.
-`if`: Indicates the start of an if statement.
-`elif`:Used in if statements for additional conditions.
-`else`: Used in if statements for the else condition.
-• `+, -, *, /`: Represents simple mathematical operations.
-• `(, ), :, =`: Symbols for miscellaneous use.
-• `<, >, ?, !`: Are comparators. (? is ==, and ! is !=)
-• `print` : Prints a variable or a string in quotes.
-• `\n` : New line or Enter key, represents the end of a line (like semi-colon ’;’ in C++).
-• `run`: Executes the code.
+- `var`: Initializes a variable.
+- `int, float`: Define data types.
+- `while`: Indicates the start of a while loop.
+- `if`: Indicates the start of an if statement.
+- `elif`:Used in if statements for additional conditions.
+- `else`: Used in if statements for the else condition.
+- `+, -, *, /`: Represents simple mathematical operations.
+- `(, ), :, =`: Symbols for miscellaneous use.
+- `<, >, ?, !`: Are comparators. (? is ==, and ! is !=)
+- `print` : Prints a variable or a string in quotes.
+- `\n` : New line or Enter key, represents the end of a line (like semi-colon ’;’ in C++).
+- `run`: Executes the code.
 
 ## Instructions:
 Step-by-step instructions on how to create a program using this Domain-Specific Language (DSL):
@@ -59,7 +61,7 @@ Step-by-step instructions on how to create a program using this Domain-Specific 
    ```dsl
    if (result > 10):
        print "Result is greater than 10"
-   elif (result == 10):
+   elif (result ? 10):
        print "Result is exactly 10"
    else:
        print "Result is less than 10"
@@ -74,8 +76,9 @@ Step-by-step instructions on how to create a program using this Domain-Specific 
    ```dsl
    var int counter = 0
    while (counter < 5):
-       print "Counter is: " + counter
-       ounter = counter + 1
+       print "Counter is:"
+       print counter
+       counter = counter + 1
 
    ```
 
@@ -84,7 +87,8 @@ Step-by-step instructions on how to create a program using this Domain-Specific 
 
    Example
    ```dsl
-   run```
+   run
+   ```
 
 Putting all together, a simple program could look like this:
 ``` dsl
@@ -92,9 +96,17 @@ var int myVariable = 42
 var float result = myVariable * (2 + 3)
 print result
 
+if (result > 10):
+    print "Result is greater than 10"
+elif (result ? 10):
+    print "Result is exactly 10"
+else:
+    print "Result is less than 10"
+
 var int counter = 0
 while (counter < 5):
-    print "Counter is: " + counter
+    print "Counter is: "
+    print counter
     counter = counter + 1
 
 run
@@ -128,7 +140,8 @@ run
 > Hello world!
 ```
 
-[The full grammar](grammar.md)
+## The Grammar
+The full grammar can be found [here](/grammar.txt)
 
 
 ## References

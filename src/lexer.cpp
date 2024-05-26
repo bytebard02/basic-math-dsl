@@ -146,7 +146,7 @@ Token Lexer::scanIdentifier(Position posStart) {
   if (keyword_it != keywords.end()) {
     return {keyword_it->second, identifier, posStart, position};
   } else {
-    return {TokenType::TOKEN_IDENTIFIER, identifier, posStart, position};
+    return {TOKEN_IDENTIFIER, identifier, posStart, position};
   }
 }
 

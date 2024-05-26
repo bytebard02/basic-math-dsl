@@ -34,4 +34,11 @@ class InvalidSyntaxError : public Error {
                      const std::string& details);
 };
 
+class RuntimeError : public Error {
+ public:
+  RuntimeError(const Position& posStart,
+               const Position& posEnd,
+               const std::string& details);
+};
+
 #endif

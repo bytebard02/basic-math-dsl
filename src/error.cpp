@@ -27,3 +27,8 @@ InvalidSyntaxError::InvalidSyntaxError(const Position& posStart,
                                        const Position& posEnd,
                                        const std::string& details)
     : Error(posStart, posEnd, "Illegal Syntax", details) {}
+
+RuntimeError::RuntimeError(const Position& posStart,
+                           const Position& posEnd,
+                           const std::string& details)
+    : Error(posStart, posEnd, "Runtime Error", details) {}

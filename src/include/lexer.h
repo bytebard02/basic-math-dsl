@@ -10,8 +10,7 @@
 class Lexer {
  public:
   Lexer(std::string& inputText);
-
-  const std::string& getFileName() const;
+  
   const std::string& getInputText() const;
   const Position& getPosition() const;
   char getCurrentChar() const;

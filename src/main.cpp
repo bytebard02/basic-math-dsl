@@ -9,6 +9,7 @@ bool DEBUG_MODE = false;
 
 int main(int argc, char* argv[]) {
   while (true) {
+    // not working on windows
     system("clear");
     std::string input;
     bool isFromFile = false;
@@ -21,6 +22,7 @@ int main(int argc, char* argv[]) {
           input += line + "\n";
         }
         isFromFile = true;
+        // not working on windows
         system("clear");
         std::cout << input << std::endl << std::endl;
       } else {
